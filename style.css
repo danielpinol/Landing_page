@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+.main_title{
+  font-size: clamp(5.5rem, 19vw, 15rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.88;
+  display: inline-block;
+  background: linear-gradient(135deg, #ffffff 0%, #7dd9ff 55%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 36px;
+}
+
+.aparecer{
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.aparecer.listo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#escribe_solo {
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.55), 0 0 2px rgba(0, 212, 255, 0.9);
+}
+
+.cursor_blink {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: #00d4ff;
+  box-shadow: 0 0 6px rgba(0, 212, 255, 0.8);
+  vertical-align: middle;
+  margin-left: 3px;
+  animation: caret 1s step-end infinite;
+}
+
+@keyframes caret { 50% { opacity: 0; } }
